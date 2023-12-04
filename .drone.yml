@@ -86,7 +86,7 @@
             "password": {
                "from_secret": "docker_password"
             },
-            "repo": "rspamd/bimi-helper",
+            "repo": "nerfd/bimi-helper",
             "tags": [
                "latest-amd64"
             ],
@@ -125,7 +125,7 @@
             "password": {
                "from_secret": "docker_password"
             },
-            "repo": "rspamd/bimi-helper",
+            "repo": "nerfd/bimi-helper",
             "tags": [
                "latest-arm64"
             ],
@@ -168,8 +168,8 @@
                "${DRONE_SEMVER_SHORT}",
                "${DRONE_SEMVER_SHORT}-${DRONE_SEMVER_BUILD}"
             ],
-            "target": "rspamd/bimi-helper:latest",
-            "template": "rspamd/bimi-helper:latest-ARCH",
+            "target": "nerfd/bimi-helper:latest",
+            "template": "nerfd/bimi-helper:latest-ARCH",
             "username": {
                "from_secret": "docker_username"
             }

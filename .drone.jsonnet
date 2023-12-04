@@ -1,4 +1,4 @@
-local IMAGE_NAME = 'rspamd/bimi-helper';
+local IMAGE_NAME = 'nerfd/bimi-helper';
 
 local docker_pipeline = {
   kind: 'pipeline',
