@@ -1,10 +1,10 @@
-FROM rust:1.73 as builder
+FROM rust:1.73-bookworm as builder
 
 WORKDIR /usr/src/bimi-agent
 COPY . .
 RUN cargo install --path .
 
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 EXPOSE 8000
 
 ENV TZ=Etc/UTC \
