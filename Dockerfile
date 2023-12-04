@@ -4,7 +4,7 @@ WORKDIR /usr/src/bimi-agent
 COPY . .
 RUN cargo install --path .
 
-FROM gcr.io/distroless/base-debian12
+FROM gcr.io/distroless/cc-debian12
 
 ENV TZ=Etc/UTC
 
