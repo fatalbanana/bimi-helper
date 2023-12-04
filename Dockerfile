@@ -11,7 +11,7 @@ ENV TZ=Etc/UTC
 COPY --from=builder /usr/local/cargo/bin/bimi-agent /usr/local/bin/bimi-agent
 COPY --from=builder /usr/src/bimi-agent/data/bimi_ca.pem /usr/local/share/bimi_ca.pem
 
-USER 1000 1000
+USER 1000:1000
 CMD ["bimi-agent", "--ssl-ca-file", "/usr/local/share/bimi_ca.pem"]
 
-EXPOSE 8000
+EXPOSE 3030
