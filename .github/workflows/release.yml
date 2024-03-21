@@ -8,6 +8,8 @@ on:
 jobs:
   release:
     uses: ./.github/workflows/docker_build.yml
+    with:
+      dockerhub_name: nerfd/bimi-helper
     permissions:
       packages: write
       contents: read
