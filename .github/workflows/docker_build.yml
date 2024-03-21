@@ -39,8 +39,7 @@ jobs:
 
       - name: Set variables
         run: |
-          export VERSION_BUILD=`echo ${{ github.ref_name }} | sed s/^v// | sed 's/\+/-/'`
-          export VERSION_FULL=`echo ${{ github.ref_name }} | sed s/^v// | sed 's/\+.*//'`
+          export VERSION_FULL=${{ github.ref_name }}
           export VERSION_MAJOR_MINOR=${VERSION_FULL%.*}
           export VERSION_MAJOR=${VERSION_MAJOR_MINOR%.*}
           echo "IMG_TAGS=ghcr.io/${{ github.repository }}:latest,${{ inputs.dockerhub_name }}:latest,ghcr.io/${{ github.repository }}:${VERSION_BUILD},${{ inputs.dockerhub_name }}:${VERSION_BUILD},ghcr.io/${{ github.repository }}:${VERSION_FULL},${{ inputs.dockerhub_name }}:${VERSION_FULL},ghcr.io/${{ github.repository }}:${VERSION_MAJOR_MINOR},${{ inputs.dockerhub_name }}:${VERSION_MAJOR_MINOR},ghcr.io/${{ github.repository }}:${VERSION_MAJOR},${{ inputs.dockerhub_name }}:${VERSION_MAJOR}" >> "$GITHUB_ENV"
